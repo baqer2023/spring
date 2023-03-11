@@ -7,6 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 import com.bezkoder.spring.mssql.model.Tutorial;
 
 public interface TutorialRepository extends CrudRepository<Tutorial, Long> {
-  List<Tutorial> findByPublished(boolean published);
+  List<Tutorial> findByXpublished(boolean published);
   List<Tutorial> findByTitleContaining(String title);
+  List<Tutorial> findByTitle(String title);
 }

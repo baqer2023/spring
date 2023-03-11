@@ -22,16 +22,16 @@ public class Tutorial {
   private String description;
 
   @Column(name = "published")
-  private boolean published;
+  private boolean xpublished;
 
   public Tutorial() {
 
   }
 
-  public Tutorial(String title, String description, boolean published) {
+  public Tutorial(String title, String description, boolean xpublished) {
     this.title = title;
     this.description = description;
-    this.published = published;
+    this.xpublished = xpublished;
   }
 
   public long getId() {
@@ -54,17 +54,17 @@ public class Tutorial {
     this.description = description;
   }
 
-  public boolean isPublished() {
-    return published;
+  public boolean isXpublished() {
+    return xpublished;
   }
 
-  public void setPublished(boolean isPublished) {
-    this.published = isPublished;
+  public void setXpublished(boolean isPublished) {
+    this.xpublished = isPublished;
   }
 
   @Override
   public String toString() {
-    return "Tutorial [id=" + id + ", title=" + title + ", desc=" + description + ", published=" + published + "]";
+    return "Tutorial [id=" + id + ", title=" + title + ", desc=" + description + ", published=" + xpublished + "]";
   }
 
 }
